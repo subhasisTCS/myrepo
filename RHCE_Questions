@@ -1,0 +1,17 @@
+1. What is the function of ! in file permission?
+If we provide only execute to a text file how will the file behaves?
+
+cat /etc/sudoers
+
+# Runas alias specification
+
+# User privilege specification
+root ALL=(ALL) NOPASSWD: ALL
+
+# Group privilege specification
+%sudo ALL=(ALL) ALL
+%cloud-user ALL=(ALL) NOPASSWD: ALL
+
+
+#includedir /etc/sudoers.d
+what does it mean ? how root and cloud-user are different?
