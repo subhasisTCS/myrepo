@@ -15,3 +15,5 @@ root ALL=(ALL) NOPASSWD: ALL
 
 #includedir /etc/sudoers.d
 what does it mean ? how root and cloud-user are different?
+
+If we provide only read access to a file it can also be executed by the sameuser. Why?
