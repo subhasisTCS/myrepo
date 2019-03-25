@@ -1,6 +1,3 @@
-{
-  "Version": "2012-10-17",
-  "Statement": [
     {
       "Effect": "Allow",
       "Action": ["s3:ListBucket"],
@@ -31,6 +28,14 @@
         "arn:aws:dynamodb:<region>:<accountID>:<resourceType>/<resourcePath>",
         "arn:aws:dynamodb:<region>:<accountID>:<resourceType>/<resourcePath>"
       ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+         "ec2:DescribeInstances", "ec2:DescribeImages",
+         "ec2:DescribeTags", "ec2:DescribeSnapshots"
+      ],
+      "Resource": "*"
     }
   ]
 }
