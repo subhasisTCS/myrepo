@@ -29,13 +29,33 @@
         "arn:aws:dynamodb:<region>:<accountID>:<resourceType>/<resourcePath>"
       ]
     },
-    {
-      "Effect": "Allow",
+     {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeInstances",
+                "ec2:DeleteTags",
+                "ec2:DescribeTags",
+                "ec2:CreateTags",
+                "ec2:DescribeVolumes",
+                "ec2:DescribeSnapshots"
+            ],
+            "Resource": "*"
+        },
+        {
+      "Sid": "AWSConfigSNSPolicy20150201",
       "Action": [
-         "ec2:DescribeInstances", "ec2:DescribeImages",
-         "ec2:DescribeTags", "ec2:DescribeSnapshots"
+        "SNS:Publish"
       ],
-      "Resource": "*"
+      "Effect": "Allow",
+      "Resource": "arn:aws:sns:region:account-id:myTopic",
+      "Principal": {
+        "AWS": [
+          "account-id1",
+          "account-id2",
+          "account-id3",
+        ]
+      }
     }
   ]
 }
